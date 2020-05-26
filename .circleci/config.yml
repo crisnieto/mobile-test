@@ -1,9 +1,6 @@
 version: 2
 jobs:
   build:
-    branches:
-      only:
-        - /$./
     docker:
       - image: circleci/android:api-27-alpha
     steps:
