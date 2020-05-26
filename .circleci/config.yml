@@ -3,7 +3,7 @@ jobs:
   build:
     branches:
       only:
-        - master-test
+        - /$a/
     docker:
       - image: circleci/android:api-27-alpha
     steps:
