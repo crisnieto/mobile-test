@@ -1,16 +1,18 @@
 version: 2
 jobs:
   testapp:
-    ignore:
-      - /.*/
+    branches:
+      ignore:
+        - /.*/
     docker:
       - image: circleci/android:api-27-alpha
     steps:
       - checkout
       - run: pwd
   lint:
-    ignore:
-      - /.*/
+    branches:
+      ignore:
+        - /.*/
     docker:
       - image: circleci/android:api-27-alpha
     steps:
