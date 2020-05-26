@@ -9,3 +9,13 @@ jobs:
     steps:
       - checkout
       - run: pwd
+    build:
+      branches:
+        ignore:
+          - /.*/
+      docker:
+        - image: circleci/android:api-27-alpha
+      steps:
+        - checkout
+        - run: pwd    
+      
