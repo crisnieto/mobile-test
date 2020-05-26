@@ -1,26 +1,11 @@
 version: 2
 jobs:
-  testapp:
+  build:
     branches:
-      ignore:
-        - /.*/
+      only:
+        - master-test
     docker:
       - image: circleci/android:api-27-alpha
     steps:
       - checkout
       - run: pwd
-  lint:
-    branches:
-      ignore:
-        - /.*/
-    docker:
-      - image: circleci/android:api-27-alpha
-    steps:
-      - checkout
-      - run: pwd
-workflows:
-  version: 2
-  build_and_test:
-    jobs:
-      - testapp
-      - lint
