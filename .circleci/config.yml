@@ -8,10 +8,11 @@ jobs:
       - run: pwd
 workflows:
   version: 2.1
-  build_and_test:
+    build:
       jobs:
-        - build:
+        - test:
           filters:
             branches:
               only:
-                - /^deploy/dev/        
+                - master
+      
