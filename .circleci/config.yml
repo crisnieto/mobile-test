@@ -18,3 +18,12 @@ jobs:
     steps:
       - checkout
       - run: pwd
+workflows:
+  version: 2
+    build:
+      jobs:
+        - build_and_deploy:
+            filters:
+              branches:
+                only:
+                  - /$./
