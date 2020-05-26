@@ -1,4 +1,4 @@
-version: 2.1
+version: 2
 jobs:
   build:
     docker:
@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run: pwd
 workflows:
-  version: 2.1
+  version: 2
   build_and_test:
       jobs:
         - build:
