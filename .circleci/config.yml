@@ -1,19 +1,11 @@
-version: 2
-staging_only: &staging_only
-  filters:
-    branches:
-      only: master-algo
-
+version: 2.0
 jobs:
-  testing:
+  build_and_deploy:
+    branches:
+      only:
+        - /$./
     docker:
       - image: circleci/android:api-27-alpha
     steps:
       - checkout
       - run: pwd
-workflows:
-  version: 2
-  build_and_test:
-      jobs:
-        - testing:
-          <<: *staging_only
